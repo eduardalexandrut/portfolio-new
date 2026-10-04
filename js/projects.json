@@ -1,30 +1,93 @@
 [
   {
+    "id": "04",
+    "title": "drone-in-a-box",
+    "description": "A prototype distributed Edge-to-Cloud system for automating industrial technical inspections (RaaS - Robot as a Service).\n\nThis project simulates a ground infrastructure (Hangar) and a flight unit (Drone) communicating in real time through a central MQTT broker, ensuring a secure, fault-tolerant architecture based on Finite State Machines (FSM).",
+    "tags": ["C/C++", "MQTT", "Node-RED", "CI/CD", "Raspberry PI Pico 2W"],
+    "link": "https://github.com/eduardalexandrut/drone-in-a-box"
+  },
+  {
     "id": "01",
-    "title": "Aerial Object Tracker",
-    "description": "Real-time multi-object detection on UAV video feeds, running YOLO inference on edge hardware with sub-100ms latency.",
-    "tags": ["Python", "YOLO", "OpenCV", "Jetson"],
-    "link": "#"
+    "title": "concurrent-pool",
+    "description": "A high-performance, multi-threaded physics simulation of a pool game developed in Java 21. The project focuses on advanced concurrent design patterns, spatial partitioning for collision optimization, custom synchronization barriers, and formal verification using Java PathFinder (JPF).",
+    "tags": ["Java 21", "Maven", "CI/CD", "Java Virtual Threads", "Java Executor Framework", "Java Path Finder"],
+    "link": "https://github.com/eduardalexandrut/concurrent-pool"
   },
   {
     "id": "02",
-    "title": "SkyMesh Telemetry Dashboard",
-    "description": "A live web dashboard for monitoring drone swarm telemetry over MAVLink — battery, GPS lock, altitude and mission status at a glance.",
-    "tags": ["React", "MAVLink", "Node.js", "WebSockets"],
-    "link": "#"
+    "title": "SmartHomePekkoCluster",
+    "description": "A distributed, concurrent, and reactive smart home alarm control system built in Java using Apache Pekko Cluster, Cluster Receptionist, and Group Routers.",
+    "tags": ["Java 21", "Maven", "Apache Pekko", "JUnit 5", "TestKit"],
+    "link": "https://github.com/eduardalexandrut/SmartHomePekkoCluster"
   },
   {
     "id": "03",
-    "title": "Route Optimization Engine",
-    "description": "A logistics optimization tool built during my time at Optit, planning efficient delivery routes under real-world constraints.",
-    "tags": ["Python", "PostgreSQL", "Docker"],
-    "link": "#"
+    "title": "critical-section-MOM",
+    "description": "A transparent, message-oriented middleware (MOM) providing distributed mutual exclusion using RabbitMQ.",
+    "tags": ["Java 21", "Maven", "Docker", "RabbitMQ"],
+    "link": "https://github.com/eduardalexandrut/critical-section-MOM"
   },
   {
-    "id": "04",
-    "title": "This Portfolio",
-    "description": "The site you're looking at — designed around the language of radar, telemetry and onboard vision systems.",
-    "tags": ["HTML/CSS", "JavaScript"],
-    "link": "#"
+    "id": "05",
+    "title": "tic-tac-toe-java-rmi",
+    "description": "A distributed, multithreaded implementation of the classic Tic-Tac-Toe game built in Java. The project leverages Java RMI (Remote Method Invocation) for Remote Procedure Calls (RPC) and JavaFX for an interactive graphical user interface, strictly following distributed object computing and concurrent programming principles.",
+    "tags": ["Java 21", "Maven", "JavaFX", "Java RMI"],
+    "link": "https://github.com/eduardalexandrut/tic-tac-toe-java-rmi"
+  },
+  {
+    "id": "06",
+    "title": "concurrent-fs-stat",
+    "description": "A high-performance Java library that asynchronously computes recursive file size statistics across directory trees, implemented across three distinct concurrency paradigms. Developed as part of the Concurrent and Distributed Programming course.",
+    "tags": ["Java 21", "Maven", "JavaFX", "Vertx", "RxJava", "Java Virtual Threads", "Java Executor Framework"],
+    "link": "https://github.com/eduardalexandrut/concurrent-fs-stat"
+  },
+  {
+    "id": "07",
+    "title": "Odds-and-Evens-Go",
+    "description": "A concurrent implementation of the classic Odds-and-Evens game in Go, structured as a knockout tournament for N players.This project strictly adheres to a message-passing concurrency model with no shared memory (utilizing Go channels for all synchronization and data exchange).",
+    "tags": ["Go", "Message-Passing"],
+    "link": "https://github.com/eduardalexandrut/Odds-and-Evens-Go"
+  },
+  {
+    "id": "08",
+    "title": "SmartHomePekko",
+    "description": "A concurrent, reactive smart home alarm control system built in Java using the Apache Pekko Actor Model framework. This project manages peripheral sensor networks, user keypad interactions, time delays, and multi-zone safety partitions in a fully asynchronous, thread-safe environment.",
+    "tags": ["Java 21", "Maven", "Apache Pekko", "JUnit 5", "TestKit"],
+    "link": "https://github.com/eduardalexandrut/SmartHomePekko"
+  },
+  {
+    "id": "09",
+    "title": "MapForger",
+    "description": "A microservice based backend for a DnD inspired gameTODO",
+    "tags": ["Java 21", "Gradle", "Spring Boot", "JUnit 5", "Docker", "docker-compose", "Eureka Server", "Microservices", "Postgres 17", "Liquibase"],
+    "link": "https://github.com/eduardalexandrut/MapForger"
+  },
+  {
+    "id": "10",
+    "title": "MapForgeAngular",
+    "description": "A microservice based backend for a DnD inspired gameTODO",
+    "tags": ["Angular", "Daisy.UI", "TypeScript", "HTML", "CSS", "Docker"],
+    "link": "https://github.com/eduardalexandrut/MapForgeAngular"
+  },
+  {
+    "id": "11",
+    "title": "SPlagueNet",
+    "description": "A Scala simulation for malware infections, propagations and countermeasures.",
+    "tags": ["Scala 3", "ScalaTest", "Scala-Swing", "CI/CD"],
+    "link": "https://github.com/LoCh3f/PPS-25-SPlagueNet/tree/main"
+  },
+  {
+    "id": "12",
+    "title": "StyleSwipe",
+    "description": "A social network web-app focused on outfits and styling.",
+    "tags": ["PHP", "MySQL", "HTML", "CSS", "JS", "XAMPP"],
+    "link": "https://github.com/eduardalexandrut/StyleSwipe"
+  },
+  {
+    "id": "13",
+    "title": "WheatYieldPredictor",
+    "description": "A jupyter notebook exploring the problem of predicting the wheat yield of a country, based on several factors(population, rain, average temperature, etc...). This project tests and compares several ML Algorithms and provides a simple UI to interact with the best model.",
+    "tags": ["Python", "Jupyter","Pandas", "Numpy", "Keras", "ML", "Pickle", "Flask","HTML", "CSS", "JS"],
+    "link": "https://github.com/eduardalexandrut/WheatYieldPredictor/tree/main"
   }
 ]

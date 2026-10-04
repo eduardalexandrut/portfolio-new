@@ -419,6 +419,34 @@
   @media (prefers-reduced-motion: reduce){
     .radar-sweep,.orbit-track,.satellite-spin,.eyebrow::before,.about-portrait::after{animation:none !important;}
   }
+
+  .log-list {
+    list-style: none;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 580px;
+  }
+
+  .log-list li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .log-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+  }
 </style>
 </head>
 <body>
@@ -458,10 +486,10 @@
     <div class="hero-copy">
       <div class="eyebrow">Status: Online</div>
       <h1>Software Engineer<br>focused on <span>Computer Vision</span>, <span>Deep Learning</span> &amp; <span>UAV</span> systems.</h1>
-      <p>I build perception pipelines and autonomy software for drones — from pixels to flight decisions. Currently based between the lab and the runway.</p>
+      <p>I have a background in R&D and full-stack development, but my true passion lies in building perception pipelines for drones — from pixels to flight decisions. Currently in my final year of an MSc in Computer Science &amp; Engineering at UniBo, I am actively seeking internship or full-time roles.</p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View projects</a>
-        <a href="#about" class="btn-ghost">About me</a>
+        <a href="#contact" class="btn-ghost">Hire me</a>
       </div>
     </div>
 
@@ -484,20 +512,7 @@
           <div class="git-activity-loading">Fetching recent commits…</div>
         </div>
       </div>
-<!--      <div class="radar-ring r1"></div>-->
-<!--      <div class="radar-ring r2"></div>-->
-<!--      <div class="radar-ring r3"></div>-->
-<!--      <div class="radar-ring r4"></div>-->
-<!--      <div class="radar-cross h"></div>-->
-<!--      <div class="radar-cross v"></div>-->
-<!--      <div class="radar-sweep"></div>-->
-<!--      <div class="radar-blip" style="top:28%;left:64%;"></div>-->
-<!--      <div class="radar-blip" style="top:68%;left:36%;animation-delay:1s;"></div>-->
-<!--      <div class="radar-blip" style="top:40%;left:24%;animation-delay:2s;"></div>-->
-<!--      <div class="radar-label" style="top:2%;left:52%;">N</div>-->
-<!--      <div class="radar-label" style="bottom:2%;left:52%;">S</div>-->
-<!--      <div class="radar-label" style="top:50%;right:0%;">E</div>-->
-<!--      <div class="radar-label" style="top:50%;left:-2%;">W</div>-->
+
     </div>
   </div>
 </section>
@@ -508,7 +523,6 @@
     <div class="sec-head reveal">
       <div class="eyebrow">Flight log</div>
       <h2>About me</h2>
-      <p>A short mission history — from classroom to codebase to cockpit.</p>
     </div>
 
     <div class="about-grid">
@@ -520,18 +534,25 @@
         <div class="log-entry">
           <span class="log-time">// GRADUATED — UNIBO</span>
           <h3>BSc in Software Engineering, University of Bologna</h3>
-          <p>Graduated in Software Engineering from Unibo, where I built the foundations in algorithms, distributed systems and clean software design that everything after was built on.</p>
+          <p>Established a strong foundation in algorithms, distributed systems, and clean software architecture.
+            During a university internship, I engineered an automated data-gathering pipeline using Python, Keras OCR, Tesseract, and BeautifulSoup to construct dataset for visual IQ tests. For my thesis, I developed a complete evaluation pipeline to measure the reasoning capabilities of open-weight LLMs on visual IQ tests, handling model selection, prompt engineering, and final performance analysis.</p>
         </div>
         <div class="log-entry">
           <span class="log-time">// DEPLOYED — OPTIT, CESENA</span>
-          <h3>Software Engineer @ Optit, Cesena</h3>
-          <p>Spent a year at Optit working on real-world optimization and software products, shipping features end-to-end and learning what production code actually demands.</p>
+          <h3>Full Stack Developer @ Optit</h3>
+          <p>Worked on enterprise-grade logistics and optimization software, shipping end-to-end features and managing the rigorous demands of production code:</p>
+          <ul class="log-list">
+            <li>Engineered a custom DTO-to-Entity conversion framework tailored for logistics domain models, achieving a 30% increase in conversion speed through optimized mapping and querying logic.</li>
+            <li>Implemented Bitbucket CI/CD pipelines to automate building, testing, and packaging, including a custom notification system for automated client-specific status updates.</li>
+            <li>Developed a comprehensive suite of JUnit parameterized tests to validate complex logistics optimization models across diverse edge-case scenarios.</li>
+            <li>Enhanced platform scalability by architecting a multi-tenant system utilizing multiple data sources.</li>
+            <li>Refactored legacy backend architecture, eliminating redundant layers and automating code generation with JavaParser to significantly reduce boilerplate and development time.</li>
+          </ul>
         </div>
         <div class="log-entry">
           <span class="log-time">// CURRENT — IN PROGRESS</span>
           <h3>MSc studies, in progress</h3>
-          <p>Now pursuing my Master's degree, sharpening focus on computer vision and UAV autonomy while continuing to build full stack projects on the side.</p>
-        </div>
+          <p>Currently pursuing my Master's degree, heavily specializing in computer vision, deep learning, and UAV autonomy, while actively developing full-stack side projects to keep my engineering skills sharp.</p>        </div>
       </div>
     </div>
   </div>
@@ -548,89 +569,114 @@
 
     <div class="skills-grid">
 
+      <!-- 1. LANGUAGES -->
+      <div class="skill-block reveal">
+        <div class="orbit-system" style="--dur:30s;">
+          <div class="orbit-ring" style="width:96%;height:96%;"></div>
+          <div class="orbit-ring" style="width:62%;height:62%;"></div>
+          <div class="orbit-track">
+            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">C / C++</div></div></div></div>
+            <div class="satellite" style="--a:60deg;"><div class="satellite-counter" style="--na:-60deg;"><div class="satellite-spin"><div class="satellite-pill">Java / Kotlin</div></div></div></div>
+            <div class="satellite" style="--a:120deg;"><div class="satellite-counter" style="--na:-120deg;"><div class="satellite-spin"><div class="satellite-pill">Python</div></div></div></div>
+            <div class="satellite" style="--a:180deg;"><div class="satellite-counter" style="--na:-180deg;"><div class="satellite-spin"><div class="satellite-pill">TypeScript</div></div></div></div>
+            <div class="satellite" style="--a:240deg;"><div class="satellite-counter" style="--na:-240deg;"><div class="satellite-spin"><div class="satellite-pill">Scala</div></div></div></div>
+            <div class="satellite" style="--a:300deg;"><div class="satellite-counter" style="--na:-300deg;"><div class="satellite-spin"><div class="satellite-pill">Prolog</div></div></div></div>
+          </div>
+          <div class="hub"><span>LANGUAGES</span></div>
+        </div>
+        <h3>Programming Languages</h3>
+        <p class="skill-desc">Core syntax and paradigms for systems logic, data science, and enterprise architectures.</p>
+      </div>
+
+      <!-- 2. FRONTEND -->
       <div class="skill-block reveal">
         <div class="orbit-system" style="--dur:26s;">
           <div class="orbit-ring" style="width:96%;height:96%;"></div>
           <div class="orbit-ring" style="width:62%;height:62%;"></div>
           <div class="orbit-track">
-            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">OpenCV</div></div></div></div>
-            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">PyTorch</div></div></div></div>
-            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">YOLO</div></div></div></div>
-            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">ROS 2</div></div></div></div>
-            <div class="satellite" style="--a:288deg;"><div class="satellite-counter" style="--na:-288deg;"><div class="satellite-spin"><div class="satellite-pill">OpenVINO</div></div></div></div>
+            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">React</div></div></div></div>
+            <div class="satellite" style="--a:60deg;"><div class="satellite-counter" style="--na:-60deg;"><div class="satellite-spin"><div class="satellite-pill">Angular</div></div></div></div>
+            <div class="satellite" style="--a:120deg;"><div class="satellite-counter" style="--na:-120deg;"><div class="satellite-spin"><div class="satellite-pill">HTML/JS/CSS</div></div></div></div>
+            <div class="satellite" style="--a:180deg;"><div class="satellite-counter" style="--na:-180deg;"><div class="satellite-spin"><div class="satellite-pill">SCSS</div></div></div></div>
+            <div class="satellite" style="--a:240deg;"><div class="satellite-counter" style="--na:-240deg;"><div class="satellite-spin"><div class="satellite-pill">Tailwind</div></div></div></div>
+            <div class="satellite" style="--a:300deg;"><div class="satellite-counter" style="--na:-300deg;"><div class="satellite-spin"><div class="satellite-pill">DaisyUI</div></div></div></div>
           </div>
-          <div class="hub"><span>COMPUTER<br>VISION</span></div>
+          <div class="hub"><span>FRONTEND</span></div>
         </div>
-        <h3>Computer Vision</h3>
-        <p class="skill-desc">Detection, tracking and real-time inference pipelines for camera-equipped systems.</p>
+        <h3>Frontend &amp; UI</h3>
+        <p class="skill-desc">Building responsive, component-driven interfaces and modern styling frameworks.</p>
       </div>
 
-      <div class="skill-block reveal">
-        <div class="orbit-system" style="--dur:32s;">
-          <div class="orbit-ring" style="width:96%;height:96%;"></div>
-          <div class="orbit-ring" style="width:62%;height:62%;"></div>
-          <div class="orbit-track">
-            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">PX4</div></div></div></div>
-            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">MAVLink</div></div></div></div>
-            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">Pixhawk</div></div></div></div>
-            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">STM32</div></div></div></div>
-            <div class="satellite" style="--a:288deg;"><div class="satellite-counter" style="--na:-288deg;"><div class="satellite-spin"><div class="satellite-pill">Raspberry Pi</div></div></div></div>
-          </div>
-          <div class="hub"><span>UAV &amp;<br>EMBEDDED</span></div>
-        </div>
-        <h3>UAV &amp; Embedded</h3>
-        <p class="skill-desc">Flight controllers, telemetry protocols and onboard compute for autonomous drones.</p>
-      </div>
-
-      <div class="skill-block reveal">
-        <div class="orbit-system" style="--dur:22s;">
-          <div class="orbit-ring" style="width:96%;height:96%;"></div>
-          <div class="orbit-ring" style="width:62%;height:62%;"></div>
-          <div class="orbit-track">
-            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">Java</div></div></div></div>
-            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">Spring</div></div></div></div>
-            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">Node.js</div></div></div></div>
-            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">PostgreSQL</div></div></div></div>
-            <div class="satellite" style="--a:288deg;"><div class="satellite-counter" style="--na:-288deg;"><div class="satellite-spin"><div class="satellite-pill">Docker</div></div></div></div>
-          </div>
-          <div class="hub"><span>BACKEND</span></div>
-        </div>
-        <h3>Backend</h3>
-        <p class="skill-desc">Services and data infrastructure that keep vision and flight systems talking to the ground.</p>
-      </div>
-
-      <div class="skill-block reveal">
-        <div class="orbit-system" style="--dur:22s;">
-          <div class="orbit-ring" style="width:96%;height:96%;"></div>
-          <div class="orbit-ring" style="width:62%;height:62%;"></div>
-          <div class="orbit-track">
-            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">Java</div></div></div></div>
-            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">Spring</div></div></div></div>
-            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">Node.js</div></div></div></div>
-            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">PostgreSQL</div></div></div></div>
-            <div class="satellite" style="--a:288deg;"><div class="satellite-counter" style="--na:-288deg;"><div class="satellite-spin"><div class="satellite-pill">Docker</div></div></div></div>
-          </div>
-          <div class="hub"><span>Programming Languages</span></div>
-        </div>
-        <h3>Programming Languages</h3>
-        <p class="skill-desc">Services and data infrastructure that keep vision and flight systems talking to the ground.</p>
-      </div>
-
+      <!-- 3. BACKEND & DATA (Accorpati per simmetria perfetta) -->
       <div class="skill-block reveal">
         <div class="orbit-system" style="--dur:28s;">
           <div class="orbit-ring" style="width:96%;height:96%;"></div>
           <div class="orbit-ring" style="width:62%;height:62%;"></div>
           <div class="orbit-track">
-            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">React</div></div></div></div>
-            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">TypeScript</div></div></div></div>
-            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">Git</div></div></div></div>
-            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">Linux</div></div></div></div>
-            <div class="satellite" style="--a:288deg;"><div class="satellite-counter" style="--na:-288deg;"><div class="satellite-spin"><div class="satellite-pill">Figma</div></div></div></div>
+            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">Spring Boot</div></div></div></div>
+            <div class="satellite" style="--a:60deg;"><div class="satellite-counter" style="--na:-60deg;"><div class="satellite-spin"><div class="satellite-pill">Node / Express</div></div></div></div>
+            <div class="satellite" style="--a:120deg;"><div class="satellite-counter" style="--na:-120deg;"><div class="satellite-spin"><div class="satellite-pill">Django</div></div></div></div>
+            <div class="satellite" style="--a:180deg;"><div class="satellite-counter" style="--na:-180deg;"><div class="satellite-spin"><div class="satellite-pill">Postgres / MySQL</div></div></div></div>
+            <div class="satellite" style="--a:240deg;"><div class="satellite-counter" style="--na:-240deg;"><div class="satellite-spin"><div class="satellite-pill">MongoDB</div></div></div></div>
+            <div class="satellite" style="--a:300deg;"><div class="satellite-counter" style="--na:-300deg;"><div class="satellite-spin"><div class="satellite-pill">Liquibase</div></div></div></div>
           </div>
-          <div class="hub"><span>FRONTEND<br>&amp; TOOLS</span></div>
+          <div class="hub"><span>BACKEND<br>&amp; DATA</span></div>
         </div>
-        <h3>Frontend &amp; Tools</h3>
-        <p class="skill-desc">Dashboards and interfaces for making sense of what the drone sees and does.</p>
+        <h3>Backend &amp; Databases</h3>
+        <p class="skill-desc">Server-side logic, scalable APIs, relational/NoSQL data modeling, and schema migrations.</p>
+      </div>
+
+      <!-- 4. DEVOPS & BUILD (Riscritto corretto con 5 elementi) -->
+      <div class="skill-block reveal">
+        <div class="orbit-system" style="--dur:24s;">
+          <div class="orbit-ring" style="width:96%;height:96%;"></div>
+          <div class="orbit-ring" style="width:62%;height:62%;"></div>
+          <div class="orbit-track">
+            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">Docker / Compose</div></div></div></div>
+            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">CI/CD</div></div></div></div>
+            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">GitHub Actions</div></div></div></div>
+            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">Gradle</div></div></div></div>
+            <div class="satellite" style="--a:288deg;"><div class="satellite-counter" style="--na:-288deg;"><div class="satellite-spin"><div class="satellite-pill">Maven</div></div></div></div>
+          </div>
+          <div class="hub"><span>DEVOPS &amp;<br>BUILD</span></div>
+        </div>
+        <h3>DevOps &amp; Build Tools</h3>
+        <p class="skill-desc">Containerization, automated build pipelines, and continuous integration/deployment.</p>
+      </div>
+
+      <!-- 5. ML / CV -->
+      <div class="skill-block reveal">
+        <div class="orbit-system" style="--dur:32s;">
+          <div class="orbit-ring" style="width:96%;height:96%;"></div>
+          <div class="orbit-ring" style="width:62%;height:62%;"></div>
+          <div class="orbit-track">
+            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">TensorFlow</div></div></div></div>
+            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">Keras</div></div></div></div>
+            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">OpenCV</div></div></div></div>
+            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">NumPy</div></div></div></div>
+            <div class="satellite" style="--a:288deg;"><div class="satellite-counter" style="--na:-288deg;"><div class="satellite-spin"><div class="satellite-pill">Pandas</div></div></div></div>
+          </div>
+          <div class="hub"><span>ML &amp;<br>VISION</span></div>
+        </div>
+        <h3>ML &amp; Computer Vision</h3>
+        <p class="skill-desc">Deep learning architectures, data manipulation, and image processing algorithms.</p>
+      </div>
+
+      <!-- 6. IOT & EMBEDDED -->
+      <div class="skill-block reveal">
+        <div class="orbit-system" style="--dur:22s;">
+          <div class="orbit-ring" style="width:96%;height:96%;"></div>
+          <div class="orbit-ring" style="width:62%;height:62%;"></div>
+          <div class="orbit-track">
+            <div class="satellite" style="--a:0deg;"><div class="satellite-counter" style="--na:0deg;"><div class="satellite-spin"><div class="satellite-pill">Arduino Uno</div></div></div></div>
+            <div class="satellite" style="--a:72deg;"><div class="satellite-counter" style="--na:-72deg;"><div class="satellite-spin"><div class="satellite-pill">RPi Pico 2W</div></div></div></div>
+            <div class="satellite" style="--a:144deg;"><div class="satellite-counter" style="--na:-144deg;"><div class="satellite-spin"><div class="satellite-pill">ESP32</div></div></div></div>
+            <div class="satellite" style="--a:216deg;"><div class="satellite-counter" style="--na:-216deg;"><div class="satellite-spin"><div class="satellite-pill">RPi 5</div></div></div></div>
+          </div>
+          <div class="hub"><span>IOT &amp;<br>EMBEDDED</span></div>
+        </div>
+        <h3>IoT &amp; Embedded</h3>
+        <p class="skill-desc">Microcontrollers, edge computing hardware, and low-level system integration.</p>
       </div>
 
     </div>
@@ -652,9 +698,8 @@
       <input type="text" id="projectSearch" placeholder="e.g. Python YOLO...">
     </div>
 
-    <!-- Griglia dei progetti (svuotata, verrà popolata dal JS) -->
     <div class="proj-grid reveal" id="projectsGrid">
-      <!-- I progetti verranno iniettati qui -->
+      <!-- Projects will be injected here -->
     </div>
 
     <p class="proj-note reveal" id="projectsCount">Loading missions...</p>
@@ -674,10 +719,10 @@
         <h2>Let's talk shop.</h2>
         <p>Open to opportunities in computer vision, UAV software and full stack engineering. Reach out through any channel below.</p>
         <div class="contact-rows">
-          <div class="contact-row"><span>Email</span><a href="mailto:eduard@example.com">eduard@example.com</a></div>
-          <div class="contact-row"><span>GitHub</span><a href="#">github.com/eduard</a></div>
-          <div class="contact-row"><span>LinkedIn</span><a href="#">linkedin.com/in/eduard</a></div>
-          <div class="contact-row"><span>Location</span><span>Emilia-Romagna, IT</span></div>
+          <div class="contact-row"><span>Email</span><a href="mailto:aeduardtoni@gmail.com">aeduardtoni@gmail.com</a></div>
+          <div class="contact-row"><span>GitHub</span><a href="https://github.com/eduardalexandrut">https://github.com/eduardalexandrut</a></div>
+          <div class="contact-row"><span>LinkedIn</span><a href="https://www.linkedin.com/in/eduard-toni-alexandru-5b39751b7/">linkedin.com/in/eduard</a></div>
+          <div class="contact-row"><span>Location</span><span>Ravenna, Emilia-Romagna, IT</span></div>
         </div>
       </div>
 <!--      <div class="contact-right">-->

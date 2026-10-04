@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01",
+    "title": "Aerial Object Tracker",
+    "description": "Real-time multi-object detection on UAV video feeds, running YOLO inference on edge hardware with sub-100ms latency.",
+    "tags": ["Python", "YOLO", "OpenCV", "Jetson"],
+    "link": "#"
+  },
+  {
+    "id": "02",
+    "title": "SkyMesh Telemetry Dashboard",
+    "description": "A live web dashboard for monitoring drone swarm telemetry over MAVLink — battery, GPS lock, altitude and mission status at a glance.",
+    "tags": ["React", "MAVLink", "Node.js", "WebSockets"],
+    "link": "#"
+  },
+  {
+    "id": "03",
+    "title": "Route Optimization Engine",
+    "description": "A logistics optimization tool built during my time at Optit, planning efficient delivery routes under real-world constraints.",
+    "tags": ["Python", "PostgreSQL", "Docker"],
+    "link": "#"
+  },
+  {
+    "id": "04",
+    "title": "This Portfolio",
+    "description": "The site you're looking at — designed around the language of radar, telemetry and onboard vision systems.",
+    "tags": ["HTML/CSS", "JavaScript"],
+    "link": "#"
+  }
+]

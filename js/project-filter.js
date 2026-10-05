@@ -3,7 +3,7 @@ let allProjects = [];
 // load projects from projects.json
 async function loadProjects() {
     try {
-        const response = await fetch('/js/projects.json');
+        const response = await fetch('js/projects.json');
         if (!response.ok) throw new Error('Network response was not ok');
         allProjects = await response.json();
         renderProjects(allProjects);
